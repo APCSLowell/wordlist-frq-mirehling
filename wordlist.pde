@@ -1,29 +1,20 @@
-public int numWordsOfLength(int length)
-{
-    int numWords = 0;
-
-    for(int i = 0; i < myList.size(); i++)
-    {
-        String word = (String) myList.get(i);
-        
-        if(word.length() == length)
-            numWords++;
+public int numWordsOfLength( int len ) {
+    int cnt = 0;
+    for (Object w: myList) {
+        String s = (String)w; 
+        if (s.length() == len) {
+            cnt++;
+        }
     }
-
-    return numWords;
+    return cnt; 
+    
 }
 
-public void removeWordsOfLength(int length)
-{
-    int i = 0;
-
-    while(i < myList.size())
-    {
-        String word = (String) myList.get(i);
-        
-        if(word.length() == length)
-            myList.remove(i);
-        else
-            i++;
+public void removeWordsOfLength( int len ) {
+    for (int i=myList.size() - 1; i>=0; i--) {
+        String s = (String)myList.get(i);
+        if (s.length() == len) {
+            myList.remove(i); 
+        }
     }
 }
