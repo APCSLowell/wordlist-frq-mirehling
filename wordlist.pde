@@ -1,16 +1,16 @@
 public int numWordsOfLength(int length)
 {
-    int a = 0;
+    int numWords = 0;
 
     for(int i = 0; i < myList.size(); i++)
     {
         String word = (String) myList.get(i);
         
         if(word.length() == length)
-            a++;
+            numWords++;
     }
 
-    return a;
+    return numWords;
 }
 
 public void removeWordsOfLength(int length)
