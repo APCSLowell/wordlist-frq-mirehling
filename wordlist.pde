@@ -1,5 +1,6 @@
 public int numWordsOfLength(int length)
 {
+    private ArrayList myList;
     int a = 0;
 
     for(int i = 0; i < myList.size(); i++)
