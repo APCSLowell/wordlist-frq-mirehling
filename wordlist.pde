@@ -1,31 +1,40 @@
-public int numWordsOfLength(int length)
+import java.util.*;
+
+public class WordList
 {
-    private ArrayList myList;
-    int a = 0;
+    private list <String> myList;
 
-    for(int i = 0; i < myList.size(); i++)
+    public WordList() { myList = new ArrayList<String>(); }
+    public void add(String word) { myList.add(word); }
+    public String to String() { return myList.toString(); }
+
+
+    public int numWordsOfLength(int length)
     {
-        String word = (String) myList.get(i);
+        int a = 0;
 
-        if(word.length() == length)
-            a++;
+        for(int i = 0; i < myList.size(); i++)
+        {
+            String word = (String) myList.get(i);
+
+            if(word.length() == length)
+                a++;
+        }
+
+        return a;
     }
 
-    return a;
-}
-
-public void removeWordsOfLength(int length)
-{
-    private String myName;
-    int i = 0;
-
-    while(i < myList.size())
+    public void removeWordsOfLength(int length)
     {
-        String word = (String) myList.get(i);
+        int j = 0;
 
-        if(word.length() == length)
-            myList.remove(i);
-        else
-            i++;
+        while(j < myList.size())
+        {
+            String word = (String) myList.get(j);
+
+            if(word.length() == length)
+                myList.remove(j);
+            else
+                j++;
+        }
     }
-}
