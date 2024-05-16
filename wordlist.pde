@@ -16,6 +16,7 @@ public int numWordsOfLength(int length)
 
 public void removeWordsOfLength(int length)
 {
+    private String myName;
     int i = 0;
 
     while(i < myList.size())
