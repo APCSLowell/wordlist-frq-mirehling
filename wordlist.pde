@@ -1,6 +1,41 @@
-println(******* A-1 *******);
-println([cat, mouse, frog, dog, dog] 1 3 0);
-println(******* A-2 *******);
-println([cat, mouse, dog, dog]);
-println([mouse]);
-println([mouse]);
+import java.util.*;
+
+public class WordList
+{
+  private ArrayList <String> myList;
+
+  public WordList() { myList = new ArrayList<String>(); }
+  public void add(String word) { myList.add(word); }
+  public String toString() { return myList.toString(); }
+
+  public int numWordsOfLength(int len)
+  {
+    int numWords = 0;
+
+    for(int i = 0; i < myList.size(); i++)
+    {
+        String word = (String) myList.get(i);
+        
+        if(word.length() == len)
+            numWords++;
+    }
+
+    return numWords;
+    
+  }
+
+  public void removeWordsOfLength(int len)
+  {
+    int i = 0;
+
+    while(i < myList.size())
+    {
+        String word = (String) myList.get(i);
+        
+        if(word.length() == len)
+            myList.remove(i);
+        else
+            i++;
+    }
+  }
+}
